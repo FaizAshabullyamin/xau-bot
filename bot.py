@@ -134,6 +134,7 @@ def main():
     m5, m15 = fetch("5m", "2d"), fetch("15m", "5d")
     if m5 is None or m15 is None:
         print("tiada data (pasaran tutup / API gagal)")
+        save(s)
         return
     manage(s, m5)
     if not s["open"]:
